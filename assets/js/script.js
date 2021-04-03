@@ -12,6 +12,6 @@ var timeDisplay = function() {
 //when user scrolls, show time blocks
 
 //each time block color coded based on past, present or future
-
+var =
 
 timeDisplay();
