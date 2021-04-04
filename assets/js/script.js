@@ -1,6 +1,7 @@
 
 //document.getElementById("text-area-09").addEventListener("click", addEvent());
 
+
 //current date and time
 const timeDisplay = function() {
     var todaysDate = moment()._d;
@@ -46,6 +47,21 @@ const displayTimeBlocks = function () {
 
 };
 
+
+
+const saveData = function(event) {
+    const saveButton = document.getElementById("#saveBtn");
+    //when saveButton is clicked..
+    saveButton.addEventListener("click", function() {})
+    console.log("works");
+};
+
+const eventSubmitHandler = function(event) {
+    //stops browser from refreshing
+    event.preventDefault();
+    console.log(event);
+};
+
 // const addEvent = function() {
 //     const eventBox = document.getElementById("#textarea-09");
 //     const newDiv = document.createElement("div");
@@ -59,6 +75,20 @@ timeDisplay();
 displayTimeBlocks();
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Pseudo code for challenge 5
 //      1 When user lands, the page loads
 //      2 Add the curernt date and time for the user
@@ -69,7 +99,7 @@ displayTimeBlocks();
 //      6 Indicate if the block is in past, present, or future
 //      7 Add button for user to click on add an event
 //      8 When event is clicked, should be able to edit the timeblock
-//    9 Create "save" button
+//      9 Create "save" button
 //    10 When save button clicked, save event to local storage
 //    11 Retrieved data from local storage
 //    12 Updated to the DOM

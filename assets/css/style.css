@@ -64,7 +64,16 @@ body {
   color: white;
 }
 
+.saveBtn:before {
+  content: "Save";
+  /* text-decoration: none; */
+}
+
 .saveBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -76,6 +85,7 @@ body {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+  /* text-decoration: none; */
 }
 
 .container {
