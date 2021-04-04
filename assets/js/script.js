@@ -50,19 +50,24 @@ const displayTimeBlocks = function () {
 
 
 const saveData = function() {
-    const saveButton = document.querySelectorAll("#saveBtn");
+    const saveButtons = document.querySelectorAll(".saveBtn");
+    const textAreas = document.querySelectorAll(".textarea");
     //when saveButton is clicked..
-    saveButton.forEach(function (element) {
+    saveButtons.forEach(function (element) {
         //each time a button is clicked, it will call eventSubmitHandler
         element.addEventListener("click", eventSubmitHandler);
+            for (var i = 0; i < textAreas[i].length; i++) {
+                console.log(textAreas[i])
+                if (textAreas[i].value !== textAreas[i].value) {
+                    localStorage.setItem("new event", textAreas[i].value);
+            };
+        };
     });
-    console.log("works");
 };
-
 const eventSubmitHandler = function(event) {
     //stops browser from refreshing
     event.preventDefault();
-    console.log(event);
+    //console.log("works");
 };
 
 // const addEvent = function() {
@@ -73,10 +78,11 @@ const eventSubmitHandler = function(event) {
 //     console.log("works");
 // };
 
-
+saveData();
 timeDisplay();
 displayTimeBlocks();
 
+document.getElementById("savebtn").addEventListener("click", saveData);
 
 
 
