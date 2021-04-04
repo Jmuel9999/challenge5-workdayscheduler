@@ -49,10 +49,13 @@ const displayTimeBlocks = function () {
 
 
 
-const saveData = function(event) {
-    const saveButton = document.getElementById("#saveBtn");
+const saveData = function() {
+    const saveButton = document.querySelectorAll("#saveBtn");
     //when saveButton is clicked..
-    saveButton.addEventListener("click", function() {})
+    saveButton.forEach(function (element) {
+        //each time a button is clicked, it will call eventSubmitHandler
+        element.addEventListener("click", eventSubmitHandler);
+    });
     console.log("works");
 };
 
