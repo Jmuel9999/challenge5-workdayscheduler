@@ -46,16 +46,38 @@ const displayTimeBlocks = function () {
 
 };
 
-const addEvent = function() {
-    const eventBox = document.getElementById("#textarea-09");
-    const newDiv = document.createElement("div");
-    eventBox.textContent = "anything";
-    eventBox.appendChild(newDiv);
-    console.log("works");
-};
+// const addEvent = function() {
+//     const eventBox = document.getElementById("#textarea-09");
+//     const newDiv = document.createElement("div");
+//     eventBox.textContent = "";
+//     eventBox.appendChild(newDiv);
+//     console.log("works");
+// };
 
 
 timeDisplay();
 displayTimeBlocks();
 
 
+// Pseudo code for challenge 5
+//      1 When user lands, the page loads
+//      2 Add the curernt date and time for the user
+//        (moment.js)
+//       3 When user scrolls, show time blocks
+//       4 Show standard business hours
+//      5 Each time block is color-coded
+//      6 Indicate if the block is in past, present, or future
+//      7 Add button for user to click on add an event
+//      8 When event is clicked, should be able to edit the timeblock
+//    9 Create "save" button
+//    10 When save button clicked, save event to local storage
+//    11 Retrieved data from local storage
+//    12 Updated to the DOM
+// Actionable Steps
+//    1 Create repository
+//    2 Clone repository
+//    3 Copy starter code to cloned repository
+//    4 Test repo - run it
+//    5 Save git add .
+//    6 push to main repository
+//    7 List out the things I know well, knock them out fast
