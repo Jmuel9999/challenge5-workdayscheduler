@@ -47,17 +47,21 @@ const displayTimeBlocks = function () {
 
 };
 
-
+//let saveButtons = document.querySelectorAll(".saveBtn");
+//saveButtons.onclick = SaveData();
 
 const saveData = function() {
     const saveButtons = document.querySelectorAll(".saveBtn");
     const textAreas = document.querySelectorAll(".textarea");
-    const savedEvent = localStorage.setItem("new event", textAreas.value);
-    const storedEvent = localStorage.getItem("new event");
+    
     //when saveButton is clicked..
     saveButtons.forEach(function (element) {
-        //each time a button is clicked, it will call eventSubmitHandler
-        element.addEventListener("click", savedEvent);
+        for (var i = 0; i < saveButtons[i].length; i++) {
+            const savedItem = localStorage.setItem("new event", textAreas[i].value);
+            saveButtons[i].addEventListener("click", savedItem); 
+            //const storedValue = localStorage.getItem("new event");
+        };
+        
         //prevents page from losing saved input from adding/editing events
         element.addEventListener("click", eventSubmitHandler);
         //console.log("click");
