@@ -47,20 +47,31 @@ const displayTimeBlocks = function () {
 
 };
 
-const saveData = function() {
-    const saveButtons = document.querySelectorAll(".saveBtn");
-    //const textAreas = document.querySelectorAll(".textarea");
-    console.log(saveButtons);
-    saveButtons.forEach(function (element) {
-        for (var i = 0; saveButtons[i].length; i++) {
-            if (textAreas !== null) {
-                localStorage.setItem("new event", textAreas);
-            }    
-            eventSubmitHandler();
-            console.log("works");
-        };
-    });
-};
+$( document ).ready(function() {
+    //listen for save button clicks
+    $(".saveBtn").on("click", function () {
+    //save to storage here
+    const value = $(this).siblings(".description").val();
+    const time = $(this).parent("textDiv").attr("id");
+    //save in localStorage
+    localStorage.setItem(time, value);
+    document.addEventListener("click", eventSubmitHandler);
+  });
+});
+// const saveData = function() {
+//     const saveButtons = document.querySelectorAll(".saveBtn");
+//     //const textAreas = document.querySelectorAll(".textarea");
+//     console.log(saveButtons);
+//     saveButtons.forEach(function (element) {
+//         for (var i = 0; saveButtons[i].length; i++) {
+//             if (textAreas !== null) {
+//                 localStorage.setItem("new event", textAreas[i]);
+//             }    
+//             eventSubmitHandler();
+//             console.log("works");
+//         };
+//     });
+// };
 
 const eventSubmitHandler = function(event) {
     //stops browser from refreshing
@@ -68,12 +79,13 @@ const eventSubmitHandler = function(event) {
     //console.log("works");
 };
 
-saveData();
+//saveData();
 timeDisplay();
 displayTimeBlocks();
 
 document.addEventListener("new event", textAreas.value);
 document.addEventListener("", eventSubmitHandler);
+
 
 
 
@@ -108,4 +120,4 @@ document.addEventListener("", eventSubmitHandler);
 //    4 Test repo - run it
 //    5 Save git add .
 //    6 push to main repository
-//    7 List out the things I know well, knock them out fast
+//    7 List out the things I know well, knock them out 
