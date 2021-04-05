@@ -52,16 +52,21 @@ const displayTimeBlocks = function () {
 const saveData = function() {
     const saveButtons = document.querySelectorAll(".saveBtn");
     const textAreas = document.querySelectorAll(".textarea");
+    const savedEvent = localStorage.setItem("new event", textAreas.value);
+    const storedEvent = localStorage.getItem("new event");
     //when saveButton is clicked..
     saveButtons.forEach(function (element) {
         //each time a button is clicked, it will call eventSubmitHandler
+        element.addEventListener("click", savedEvent);
+        //prevents page from losing saved input from adding/editing events
         element.addEventListener("click", eventSubmitHandler);
-            for (var i = 0; i < textAreas[i].length; i++) {
-                console.log(textAreas[i])
-                if (textAreas[i].value !== textAreas[i].value) {
-                    localStorage.setItem("new event", textAreas[i].value);
-            };
-        };
+        //console.log("click");
+            //for (var i = 0; i < textAreas[i].length; i++) {
+                //console.log(textAreas[i])
+            //     if (textAreas[i].value !== textAreas[i].value) {
+            //         localStorage.setItem("new event", textAreas[i].value);     
+            // };
+        //};
     });
 };
 const eventSubmitHandler = function(event) {
@@ -82,7 +87,7 @@ saveData();
 timeDisplay();
 displayTimeBlocks();
 
-document.getElementById("savebtn").addEventListener("click", saveData);
+//document.getElementById("savebtn").addEventListener("click", localStorage.setItem("new event", textAreas.value));
 
 
 
