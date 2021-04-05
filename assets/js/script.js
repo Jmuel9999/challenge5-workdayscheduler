@@ -1,5 +1,5 @@
 
-//document.getElementById("text-area-09").addEventListener("click", addEvent());
+let textAreas = document.querySelectorAll(".textarea");
 
 
 //current date and time
@@ -47,59 +47,31 @@ const displayTimeBlocks = function () {
 
 };
 
-//let saveButtons = document.querySelectorAll(".saveBtn");
-//saveButtons.onclick = SaveData();
-
 const saveData = function() {
     const saveButtons = document.querySelectorAll(".saveBtn");
-    const textAreas = document.querySelectorAll(".textarea");
-    
-    //when saveButton is clicked..
+    //const textAreas = document.querySelectorAll(".textarea");
+
     saveButtons.forEach(function (element) {
-        for (var i = 0; i < saveButtons[i].length; i++) {
-            const savedItem = localStorage.setItem("new event", textAreas[i].value);
-            saveButtons.addEventListener("click", savedItem); 
-            
-            if (saveButtons.onclick = true) {
-               savedItem = textAreas[i]++;
-               saveData();
-               break;
-            };
+        for (var i = 0; saveButtons[i].length; i++) {
+            if (textAreas.[i] !== null) {
+                localStorage.setItem("new event", textAreas[i])
+            }    
         };
-        
-        //prevents page from losing saved input from adding/editing events
-        element.addEventListener("click", eventSubmitHandler);
-        //console.log("click");
-            //for (var i = 0; i < textAreas[i].length; i++) {
-                //console.log(textAreas[i])
-            //     if (textAreas[i].value !== textAreas[i].value) {
-            //         localStorage.setItem("new event", textAreas[i].value);     
-            // };
-        //};
     });
-    
 };
+
 const eventSubmitHandler = function(event) {
     //stops browser from refreshing
     event.preventDefault();
     //console.log("works");
 };
 
-// const addEvent = function() {
-//     const eventBox = document.getElementById("#textarea-09");
-//     const newDiv = document.createElement("div");
-//     eventBox.textContent = "";
-//     eventBox.appendChild(newDiv);
-//     console.log("works");
-// };
-
 saveData();
 timeDisplay();
 displayTimeBlocks();
 
-//document.getElementById("savebtn").addEventListener("click", localStorage.setItem("new event", textAreas.value));
-
-
+document.addEventListener("new event", textAreas[i].value);
+document.addEventListener("", eventSubmitHandler);
 
 
 
