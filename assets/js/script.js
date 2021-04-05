@@ -58,8 +58,13 @@ const saveData = function() {
     saveButtons.forEach(function (element) {
         for (var i = 0; i < saveButtons[i].length; i++) {
             const savedItem = localStorage.setItem("new event", textAreas[i].value);
-            saveButtons[i].addEventListener("click", savedItem); 
-            //const storedValue = localStorage.getItem("new event");
+            saveButtons.addEventListener("click", savedItem); 
+            
+            if (saveButtons.onclick = true) {
+               savedItem = textAreas[i]++;
+               saveData();
+               break;
+            };
         };
         
         //prevents page from losing saved input from adding/editing events
@@ -72,6 +77,7 @@ const saveData = function() {
             // };
         //};
     });
+    
 };
 const eventSubmitHandler = function(event) {
     //stops browser from refreshing
