@@ -9,6 +9,7 @@ A website that acts as an interactive scheduler for daily events throughout a no
 * JAVASCRIPT
 
 ## Website
-
+https://jmuel9999.github.io/challenge5-workdayscheduler/
 
 ## Screenshot
+![Full website screenshot](./assets/images/127.0.0.1_5500_index.html)
