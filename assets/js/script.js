@@ -50,12 +50,14 @@ const displayTimeBlocks = function () {
 const saveData = function() {
     const saveButtons = document.querySelectorAll(".saveBtn");
     //const textAreas = document.querySelectorAll(".textarea");
-
+    console.log(saveButtons);
     saveButtons.forEach(function (element) {
         for (var i = 0; saveButtons[i].length; i++) {
-            if (textAreas.[i] !== null) {
-                localStorage.setItem("new event", textAreas[i])
+            if (textAreas !== null) {
+                localStorage.setItem("new event", textAreas);
             }    
+            eventSubmitHandler();
+            console.log("works");
         };
     });
 };
@@ -70,7 +72,7 @@ saveData();
 timeDisplay();
 displayTimeBlocks();
 
-document.addEventListener("new event", textAreas[i].value);
+document.addEventListener("new event", textAreas.value);
 document.addEventListener("", eventSubmitHandler);
 
 
